@@ -1,9 +1,6 @@
 from app.database import Base
 from sqlalchemy import Column, Integer, Text, ForeignKey, TIMESTAMP,Boolean, Date
-from sqlalchemy.sql import func
 
-
-from sqlalchemy.orm import relationship
 
 
 class SkillActivity(Base):
@@ -18,5 +15,5 @@ class SkillActivity(Base):
 
     minutes_practiced = Column(Integer)
 
-    created_at = Column(TIMESTAMP, server_default=func.now())
-    skill = relationship("Skill", back_populates="activities")
+    created_at = Column(TIMESTAMP)
+    
