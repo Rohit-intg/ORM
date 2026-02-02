@@ -8,6 +8,7 @@ class MorningActivity(Base):
     id = Column(Integer, primary_key=True, index=True)
     morning_id = Column(Integer, ForeignKey("mornings.id"), nullable=False)
 
+
     name = Column(Text, nullable=False)
     completed = Column(Boolean, nullable=False)
     is_priority = Column(Boolean, nullable=False)
