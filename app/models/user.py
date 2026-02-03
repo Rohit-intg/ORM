@@ -11,7 +11,7 @@ class User(Base):
     last_name = Column(String)
     email = Column(String,nullable=False)
     password_hash = Column(String, nullable=False)
-    phone_number = Column(Integer)
+
     profile_pic_url = Column(String)
     created_at = Column(TIMESTAMP)
     modified_at = Column(TIMESTAMP)
